@@ -1,30 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sticky Navbar</title>
-<link rel="stylesheet" href="./style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navbar</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 </head>
+
 <body>
 
-<div class="navbar">
+  <div class="navbar navbar1">
     <div class="navbar-left">
-    <a href="./" class="sitename">CDS</a>
-    <a href="#" class="active">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Feedback</a>
+      <a href="./" class="sitename">CDS</a>
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Feedback</a>
+    </div>
+    <div class="navbar-right">
+      <span id="loginBtn" onclick="loginFun()">Login</span>
+      <span class="signup" id="signupBtn" onclick="signupFun()">Signup</span>
+    </div>
   </div>
-  <div class="navbar-right">
-    <a href="#">Login</a>
-    <a href="#" class="signup">Signup</a>
+
+  <section class="hero" id="hero">
+    <div class="container-lg">
+      <div class="row align-items-center">
+        <div class="col-sm-6">
+          <h1 class="display-2 fw-bold">Criminal Face Detection</h1>
+          <p>The criminal face detection system we're implementing in our project uses facial recognition technology to
+            compare faces with a database of known criminals. It helps law enforcement quickly identify suspects.
+          </p>
+          <button class="btn btn-outline-dark btn-lg">Read more..</button>
+        </div>
+        <div class="col-sm-6 text-center">
+          <img src="./img/homeimg.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">About us</h2>
+      <p>Our project focuses on leveraging facial recognition technology to enhance law enforcement's capabilities in
+        identifying suspects swiftly. By comparing faces with a database of known criminals, our system streamlines the
+        process of pinpointing individuals of interest, aiding authorities in their efforts to maintain public safety
+        and combat crime effectively.</p>
+      <p>Our objective is clear: to empower law enforcement with an efficient tool that swiftly identifies and
+        apprehends suspects, ultimately bolstering public safety. Through ongoing innovation and collaboration, we aim
+        to advance criminal face detection technology and support law enforcement agencies globally.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">Contact us</h2>
+      <div class="row">
+        <p>For inquiries, partnerships, or more information about our criminal face detection system, please reach out
+          to us:</p>
+
+        <div class="col-sm-4 mt-4">
+          <a href="#"><i class="bi bi-envelope-fill"></i> police@gmail.com</a>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="social-media">
+            <a href="#"><i class="bi bi-twitter"></i>twitter</a>
+            <a href="#"><i class="bi bi-instagram"></i>instragram</a>
+            <a href="#"><i class="bi bi-facebook"></i>facebook</a>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <a href="#"><i class="bi bi-telephone-fill"></i> +1234567890</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center p-3 bg-body-tertiary">
+    <div>&copy; 2024. All Rights Reserved.</div>
+  </footer>
+
+  <div class="logindiv" id="logindiv">
+    <div class="login">
+      <div class="heading">Head Login</div>
+      <form>
+        <div class="field">
+          <input type="text" id="id" required>
+          <label>Head ID</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="name" required>
+          <label>Head Name</label>
+        </div>
+
+        <div class="field">
+          <input type="password" id="password" required>
+          <label>Password</label>
+        </div>
+
+        <div class="field">
+          <input type="submit" value="Login">
+        </div>
+        <span class="cancelBtn">Cancel</span>
+
+      </form>
+    </div>
   </div>
-</div>
 
-<div class="content">
-  <!-- Your content here -->
-</div>
+  <div class="sigupdiv" id="sigupdiv">
+    <div class="login">
+      <div class="heading">Sign Up</div>
 
+      <form>
+        <div class="field">
+          <input type="text" id="Sname" required>
+          <label>Name</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="department" required>
+          <label>Department</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="Spost" required>
+          <label>Post</label>
+        </div>
+
+        <div class="field">
+          <input type="email" id="Semail" required>
+          <label>Email ID</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="phone" required>
+          <label>Phone No</label>
+        </div>
+
+        <div class="field">
+          <input type="password" id="Spassword" required>
+          <label>Set Password</label>
+        </div>
+
+        <div class="field">
+          <input type="submit" value="Login">
+        </div>
+
+        <span class="cancelBtn">Cancel</span>
+
+
+      </form>
+    </div>
+  </div>
+
+<script src="./scripts/main.js"></script>
 </body>
+
 </html>

@@ -1,86 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  :root{
-    --bg-nav: #ffffff;
-    --fg-nav: rgb(0, 0, 0);
-    --fg-nav-hover: #cec;
-    --fg-btn: #333;
-    --bg-btn: #e0dfdf;
-    --br-btn: 20px;
-    --fg-hover: rgb(237, 204, 114);
-    --logo-color: rgb(0, 0, 0);
-  }
-  
-  .navbar {
-    overflow: hidden;
-    background-color: var(--bg-nav);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border: 1px solid rgb(222, 221, 221);
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
 
+:root {
+  --bg-nav: #ffffff;
+  --fg-nav: rgb(0, 0, 0);
+  --fg-nav-hover: #cec;
+  --fg-btn: #333;
+  --bg-btn: #e0dfdf;
+  --br-btn: 25px;
+  --fg-hover: #7c5cfc;
+  --logo-color: rgb(0, 0, 0);
+  --accent-color: #7c5cfc;
+}
 
-  .navbar .active {
-    margin-left: 20px;
+.navbar1 {
+  overflow: hidden;
+  background-color: var(--bg-nav);
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border: 1px solid rgb(222, 221, 221);
+}
+
+.navbar .active {
+  margin-left: 20px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: var(--fg-nav);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--fg-hover);
+}
+
+.navbar-left {
+  float: left;
+}
+
+.navbar-right {
+  float: right;
+  margin-right: 50px;
+}
+
+.navbar-right span {
+  width: 120px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.navbar-right .signup {
+  background-color: var(--bg-btn);
+  border-radius: var(--br-btn);
+}
+
+.navbar-right .signup:hover {
+  color: var(--fg-btn);
+  background-color: rgb(207, 205, 205);
+}
+
+.content {
+  padding: 20px;
+  margin-top: 60px; /* Adjust as needed based on your navbar height */
+}
+
+.navbar a.sitename {
+  color: var(--logo-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0;
+  margin: 0 20px;
+  margin-top: 10px;
+}
+
+section [class^="container"] {
+  padding: 4rem 2rem;
+}
+@media screen and (min-width: 1024px) {
+  section [class^="container"] {
+    padding: 4rem;
   }
+}
 
-  .navbar  a {
-    float: left;
-    display: block;
-    color: var(--fg-nav);
+section:not(:first-of-type) {
+  text-align: center;
+}
+
+.container a {
+  color: #000000;
+  text-decoration: none;
+}
+.container a:hover {
+  color: var(--accent-color);
+}
+
+section .card,
+.btn-outline-dark {
+  border: 2px solid #000000;
+  box-shadow: 4px 4px #000000;
+  transition: all 0.4s;
+}
+.btn-outline-dark:hover {
+  box-shadow: 4px 4px var(--accent-color);
+}
+
+/* HERO */
+
+section.hero {
+  padding-top: 72px;
+}
+@media screen and (max-width: 576px) {
+  section.hero {
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
   }
-  
-  .navbar a:hover {
-    color: var(--fg-hover);
+  section.hero img {
+    width: 80%;
+    margin: 0.5rem 0;
   }
+}
 
-  
-  .navbar-left {
-    float: left;
+/* ABOUT */
+@media screen and (min-width: 1024px) {
+  section.about .container {
+    width: 60%;
   }
-  
-  .navbar-right {
-    float: right;
-    margin-right: 50px;
-  }
+}
 
-  .navbar-right a{
-    width: 80px;
-  }
+/* PROJECTS */
+section.projects .card {
+  max-width: 17rem;
+  text-align: left;
+}
+section.projects .card img {
+  max-width: 70%;
+  margin: 1rem auto;
+}
 
-  .navbar-right .signup{
-    background-color: var(--bg-btn);
-    border-radius: var(--br-btn);
-  }
+/* CONTACT */
+section.contact .social-media a {
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+}
 
-  .navbar-right .signup:hover {
-    color: var(--fg-btn);
-    background-color: rgb(207, 205, 205)
-  }
-  
-  .content {
-    padding: 20px;
-    margin-top: 60px; /* Adjust as needed based on your navbar height */
-  }
+.about .container {
+  height: 80vh;
+}
 
-  .navbar a.sitename {
-    color: var(--logo-color);
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 0;
-    margin: 0 20px;
-    margin-top: 10px;
-  }
-  
+.logindiv {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000001f;
+  z-index:2;
+}
+
+.sigupdiv {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000001f;
+  z-index: 2;
+}
+
+.login {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login .heading {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.login form {
+  padding: 10px 30px 50px 30px;
+}
+
+.login form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login form .field input {
+  height: 100%;
+  width: 100%;
+  font-size: 17px;
+  padding-left: 20px;
+  border-radius: 25px;
+  border: 1px solid lightgray;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login form .field input:focus,
+.login form .field input:valid {
+  border-color: #4158d0;
+}
+
+.login form .field label {
+  position: absolute;
+  top: 50%;
+  color: #999;
+  left: 20px;
+  font-size: 17px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.login form .field input:focus ~ label,
+.login form .field input:valid ~ label {
+  top: 0%;
+  color: #4158d0;
+  font-size: 15px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.login form .link,
+.login form .sign-link {
+  color: #4158d0;
+  margin: 8px 0 0 10px;
+}
+
+.login form .field input[type="submit"] {
+  color: #fff;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  padding-left: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login form .field input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+.login form .sign-link {
+  color: #4158d0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login form .link a,
+.login form .sign-link a {
+  text-decoration: none;
+}
+
+.login form .link a:hover,
+.login form .sign-link a:hover {
+  text-decoration: underline;
+}
+
+
+.cancelBtn {
+  transition: 0.3 ease;
+  text-decoration: underline;
+  color: #222;
+  cursor: pointer;
+  margin-left: 45%;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.cancelBtn:hover{
+  color:#000;
+}
