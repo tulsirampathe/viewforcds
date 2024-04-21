@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  :root{
+    --bg-nav: #ffffff;
+    --fg-nav: rgb(0, 0, 0);
+    --fg-nav-hover: #cec;
+    --fg-btn: #333;
+    --bg-btn: #e0dfdf;
+    --br-btn: 20px;
+    --fg-hover: rgb(237, 204, 114);
+    --logo-color: rgb(0, 0, 0);
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: var(--bg-nav);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: 1px solid rgb(222, 221, 221);
+  }
+
+
+  .navbar .active {
+    margin-left: 20px;
+  }
+
+  .navbar  a {
+    float: left;
+    display: block;
+    color: var(--fg-nav);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: var(--fg-hover);
+  }
+
+  
+  .navbar-left {
+    float: left;
+  }
+  
+  .navbar-right {
+    float: right;
+    margin-right: 50px;
+  }
+
+  .navbar-right a{
+    width: 80px;
+  }
+
+  .navbar-right .signup{
+    background-color: var(--bg-btn);
+    border-radius: var(--br-btn);
+  }
+
+  .navbar-right .signup:hover {
+    color: var(--fg-btn);
+    background-color: rgb(207, 205, 205)
+  }
+  
+  .content {
+    padding: 20px;
+    margin-top: 60px; /* Adjust as needed based on your navbar height */
+  }
+
+  .navbar a.sitename {
+    color: var(--logo-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 20px;
+    margin-top: 10px;
+  }
+  
